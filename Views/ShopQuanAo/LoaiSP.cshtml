@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ShopQuanAoLite.Models.LoaiSanPham>
+
+<h2>THỂ LOẠI</h2>
+<div class="brands-name">
+    <ul class="nav nav-pills nav-stacked">
+            @foreach (var item in Model)
+            {
+                
+                <li><a href="@Url.Action("SPTheoLoai", "ShopQuanAo", new { id = item.MaL})">@item.TenLoai</a></li>
+            }
+    </ul>
+</div>
+

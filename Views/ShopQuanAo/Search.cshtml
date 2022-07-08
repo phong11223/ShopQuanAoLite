@@ -1,0 +1,80 @@
+﻿@model IEnumerable<ShopQuanAoLite.Models.SanPham>
+
+@{
+    ViewBag.Title = "Search";
+    Layout = null;
+}
+
+<h2>Search</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaKhuyenMai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaBan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaBST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThongTin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GioiTinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngayNhapHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnhBia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaKhuyenMai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaBan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaBST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThongTin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GioiTinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ngayNhapHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnhBia)
+        </td>
+    </tr>
+}
+
+</table>
